@@ -17,11 +17,14 @@ if (minutes < 10) {
     minutes = "0"+minutes
 }
 let hour = currentDate.getHours();
-if (hour < 10) {
-    hour = "0"+hour
+if (hour > 12) {
+    hour = hour-12
+    if (hour < 10) {
+        hour = "0"+hour
+    }
 }
 if (hour > 12) {
-    timeArea.innerHTML = (hour-12) + ":" + minutes + ":" + seconds;
+    timeArea.innerHTML = hour + ":" + minutes + ":" + seconds;
     partArea.innerHTML = "PM"
 } else {
     timeArea.innerHTML = hour + ":" + minutes + ":" + seconds;
