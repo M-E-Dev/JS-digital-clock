@@ -2,10 +2,6 @@ const timeArea = document.querySelector(".time");
 const partArea = document.querySelector(".part");
 
 
-setInterval(() => {
-    writeTime()
-}, 1000);
-
 const writeTime = ()=>{
 let currentDate = new Date;
 let seconds = currentDate.getSeconds();
@@ -32,3 +28,8 @@ if (hour > 12) {
     
 }
 }
+
+
+setInterval(() => {
+    writeTime()
+}, 1000);
